@@ -1,0 +1,8 @@
+Avg score:           5/5
+Linear model:        10/10
+Linear discussion:   5/5
+Excellent or not:    5/5
+Logistic model:      15/15
+Logistic discussion: 10/10
+
+Total:               50/50
