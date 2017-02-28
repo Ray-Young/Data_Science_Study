@@ -1,0 +1,7 @@
+.ipynb_checkpoints/
+*.tar.gz
+*.xml
+*.csv
+*.tar
+*.json
+amazon_reviews_Electronics/

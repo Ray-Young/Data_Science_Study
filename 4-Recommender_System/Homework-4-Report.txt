@@ -1,0 +1,27 @@
+1. Rating Prediction Report
+
+I merged the data of user average, item average and global average together and calculate the combined value for them. In general, the calculation formular is a * user average + b * item average + c * global average. a + b + c = 1.
+
+According to common sense, to predict the rating, the item average usually counts more proportion. So in general case, the coffcient is a bit higher than other two (0.41, 0.28, 0.31).
+
+However, in some case,  pairs don't have some column, like user average or item average data, in this situation I only combine the data I have and keep the sum of coffcient is 1.  
+
+For the user,item pairs that hasn't  user average data and item average, I just used global average data. It is also based on the rule of competition, so I revised global Average to the cofficient make it fit the target dataset better.
+
+
+2. Purchase Prediction Report
+I applyed the algorithm that first we sort the items and get the most popular items.
+
+T Since popular items have a higher probability to be purchased by people, we sum up the number of item already purchased, therefore we will add up number of 1st popular item, number of 2nd popular item ..... Until the sum is greater than the 70% of the total count and we cut here and produce the result.
+
+
+3. Helpful Prediction Report
+
+Thr primary approach is that calculating the item average and load the user's rating and compare user's rating and the average rating of the item and adjust corresponding cofficient. If the distance between user rating and average rating is very large (we assume it as 3.5), then it might be less helpful, we set the cofficient as 0.65. If the distance is from 1.75 to 3.5, then we say it's more helpful and set the cofficient as 0.8. If it's less than 1.75, we set it as 1. 
+
+According to observation and common sense of online shoping, One interesting phenomenon is that if one review is reviewed by more people, than it will be more useful compared with other reviews. Therefore, we will put a relatively high cofficient to the review. 
+
+Another phenomenon is that if the review text length is very long, for example, over 3000, I judge it to be very useful and give it a very high cofficient(0.95), because in most case such review are very helpful.
+
+For item has no item average, I used user average to substitute, and it there is no user average, it use global average to substitute.
+
