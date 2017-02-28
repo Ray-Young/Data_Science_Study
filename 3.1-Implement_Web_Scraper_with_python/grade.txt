@@ -1,0 +1,4 @@
+Q1: traveler_ratings.csv     10/10
+Q2: attribute_ratings.csv    21/25 (91,083, missing Cleanliness)
+
+Total:                       31/35

@@ -1,0 +1,7 @@
+.ipynb_checkpoints/
+*.tar.gz
+*.xml
+*.tar
+*.json
+*.html
+*.log
